@@ -1,22 +1,25 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:p2crudwithapi/screens/home.dart';
+import 'package:p2crudwithapi/bloc/student_bloc.dart';
+import 'package:p2crudwithapi/bloc/student_event.dart';
+import 'package:p2crudwithapi/services/api.dart';
 
-void main(){
-  runApp(const MyApp());
+void main() {
+  runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget{
-  const MyApp({super.key});
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'CRUD Student List',
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
+      debugShowCheckedModeBanner: false,
+      title: 'Bogart CRUD Student List',
+      home: BlocProvider(
+        create: (context) =>
+        StudentBloc(Api())..add(FetchStudents()),
+        child: HomeScreen()
       ),
-      home: const HomeScreen(),
     );
   }
 }
