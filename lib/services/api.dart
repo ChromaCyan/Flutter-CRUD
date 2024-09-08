@@ -10,7 +10,7 @@ abstract class ApiCall {
 }
 
 class Api implements ApiCall { // Implementing ApiCall
-  static const baseURL = "http://192.168.137.1:3000";
+  static const baseURL = "http://192.168.18.239:3000";
 
   // Add Student
   @override
@@ -73,7 +73,7 @@ class Api implements ApiCall { // Implementing ApiCall
 
   // Fetch Students
   @override
-  Future<List<Student>> getStudents() async { // Updated method name
+  Future<List<Student>> getStudents() async {
     try {
       final res = await http.get(Uri.parse("$baseURL/students"));
 
