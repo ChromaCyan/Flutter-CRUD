@@ -1,16 +1,10 @@
-# p2crudwithapi
+# Simple Flutter CRUD with Node.js API Implementation
 
 A simple Flutter application demonstrating CRUD operations (Create, Read, Update, Delete) with data managed through a Node.js API.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This CRUD used the following tutorials for API implementation.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [Flutter Tutorial - HTTP Requests and REST API (GET, POST, PUT and DELETE] (https://www.youtube.com/watch?v=4hq_Kwu7sgU&t=72s)
+- [Todo App using Rest API | CRUD App | Flutter English Tutorial] (https://www.youtube.com/watch?v=Wsor0fci3Ss)
