@@ -1,13 +1,13 @@
 class Student {
-  final String? id; // Add this line
-  final String? lastname;
-  final String? firstname;
-  final String? year;
-  final String? course;
-  final bool? enrolled;
+  final String id;
+  final String lastname;
+  final String firstname;
+  final String year;
+  final String course;
+  final bool enrolled;
 
   Student({
-    required this.id, // Add this line
+    required this.id,
     required this.lastname,
     required this.firstname,
     required this.year,
@@ -17,7 +17,7 @@ class Student {
 
   factory Student.fromJson(Map<String, dynamic> json) {
     return Student(
-      id: json['id'], // Add this line
+      id: json['_id'], // Use the correct field from the response
       lastname: json['lastname'],
       firstname: json['firstname'],
       year: json['year'],
@@ -28,7 +28,7 @@ class Student {
 
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
+      '_id': id,
       'lastname': lastname,
       'firstname': firstname,
       'year': year,

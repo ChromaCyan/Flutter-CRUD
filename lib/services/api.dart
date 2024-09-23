@@ -3,13 +3,13 @@ import '../models/student.dart';
 import 'package:http/http.dart' as http;
 
 abstract class ApiCall {
-  Future<List<Student>> getStudents(); // Updated method name
+  Future<List<Student>> getStudents();
   Future<void> addStudent(Student studentmodel);
   Future<void> updateStudent(String id, Student studentmodel);
   Future<void> deleteStudent(String id);
 }
 
-class Api implements ApiCall { // Implementing ApiCall
+class Api implements ApiCall {
   static const baseURL = "http://192.168.18.239:3000";
 
   // Add Student
@@ -22,7 +22,7 @@ class Api implements ApiCall { // Implementing ApiCall
         body: json.encode(studentmodel.toJson()),
       );
 
-      if (res.statusCode == 200) {
+      if (res.statusCode == 201) {
         print("Student Added Successfully");
       } else {
         print("Failed to Add Student: ${res.body}");
@@ -61,7 +61,7 @@ class Api implements ApiCall { // Implementing ApiCall
         headers: {'Content-Type': 'application/json'},
       );
 
-      if (res.statusCode == 200) {
+      if (res.statusCode == 204) {
         print("Student Deleted Successfully");
       } else {
         print("Failed to Delete Student: ${res.body}");
