@@ -14,14 +14,14 @@ class ConfirmationDialog extends StatelessWidget {
       actions: [
         TextButton(
           onPressed: () {
-            Navigator.of(context).pop(); // Close the dialog
+            Navigator.of(context).pop();
           },
           child: Text('Cancel'),
         ),
         TextButton(
           onPressed: () {
-            onConfirm(); // Call the onConfirm callback
-            Navigator.of(context).pop(); // Close the dialog
+            onConfirm();
+            Navigator.of(context).pop();
           },
           child: Text('Delete'),
         ),

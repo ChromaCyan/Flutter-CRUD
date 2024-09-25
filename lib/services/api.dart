@@ -6,7 +6,7 @@ abstract class ApiCall {
   Future<List<Student>> getStudents();
   Future<void> addStudent(Student studentmodel);
   Future<void> updateStudent(String id, Student studentmodel);
-  Future<void> deleteStudent(String id);
+  Future<void> deleteStudent(String id);git
 }
 
 class Api implements ApiCall {

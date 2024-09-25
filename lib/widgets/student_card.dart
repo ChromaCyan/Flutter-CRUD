@@ -17,7 +17,7 @@ class StudentCard extends StatelessWidget {
     return Card(
       elevation: 4,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(15), // Rounded corners
+        borderRadius: BorderRadius.circular(15),
       ),
       margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
       child: Padding(
