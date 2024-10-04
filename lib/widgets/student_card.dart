@@ -45,6 +45,10 @@ class StudentCard extends StatelessWidget {
                     'Year: ${student.year}',
                     style: TextStyle(fontSize: 16),
                   ),
+                  Text(
+                    'Enrolled: ${student.enrolled}',
+                    style: TextStyle(fontSize: 16),
+                  ),
                 ],
               ),
             ),
