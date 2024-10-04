@@ -6,14 +6,15 @@ abstract class ApiCall {
   Future<List<Student>> getStudents();
   Future<void> addStudent(Student studentmodel);
   Future<void> updateStudent(String id, Student studentmodel);
-  Future<void> deleteStudent(String id);git
+  Future<void> deleteStudent(String id);
 }
 
 class Api implements ApiCall {
-  static const baseURL = "http://192.168.18.239:3000";
+  static const baseURL = "http://localhost:3000";
 
   // Add Student
   @override
+
   Future<void> addStudent(Student studentmodel) async {
     try {
       final res = await http.post(
