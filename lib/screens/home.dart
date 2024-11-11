@@ -29,8 +29,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Bogart Students List'),
-        backgroundColor: Colors.greenAccent,
+        title: Text('Students List'),
+        backgroundColor: Colors.blue,
         actions: [
           IconButton(
             icon: Icon(
